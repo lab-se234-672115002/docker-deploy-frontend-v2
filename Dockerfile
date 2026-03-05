@@ -10,5 +10,5 @@ RUN npm run build -- --mode ${BUILD_MODE}
 FROM nginx:alpine AS production-stage
 COPY nginx-custom.conf /etc/nginx/conf.d/default.conf
 COPY --from=build-stage /app/dist /usr/share/nginx/html
-EXPOSE 8081
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
