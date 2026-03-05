@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: gerryexpress/234-deploylab-frontend:latest
+    image: gerryexpress/234-deploy-lab-frontend:latest
     pull_policy: always
     ports:
       - "8081:80"
