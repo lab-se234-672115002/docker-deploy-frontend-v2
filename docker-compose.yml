@@ -3,5 +3,5 @@ services:
     image: gerryexpress/234-deploy-lab-frontend:latest
     pull_policy: always
     ports:
-      - "8081:80"
+      - "8081:8080"
     restart: unless-stopped
