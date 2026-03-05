@@ -7,7 +7,7 @@ VITE_SERVER_URI="${VITE_SERVER_URI:-http://54.242.181.133:8082}"
 find /usr/share/nginx/html/assets -name '*.js' -exec sed -i \
     "s|_VITE_GRAPHQL_URI_PLACEHOLER_|${VITE_GRAPHQL_URI}|g" {} +
 find /usr/share/nginx/html/assets -name '*.js' -exec sed -i \
-    "s|_VITE_SERVER_URI_PLACEHOLER_|${VITE_SERV ER_URI}|g" {} +
+    "s|_VITE_SERVER_URI_PLACEHOLER_|${VITE_SERVER_URI}|g" {} +
 
 echo "Configured VITE_GRAPHQL_URI=${VITE_GRAPHQL_URI}"
 echo "Configured VITE_SERVER_URI=${VITE_SERVER_URI}"
