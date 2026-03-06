@@ -20,7 +20,7 @@ RUN npm install && \
     npm ci
 COPY . .
 RUN VITE_GRAPHQ_URI=__VITE_GRAPHQL_URI_PLACEHOLDER__ \
-    VITE_SERVER_URI_=_VITE_SERVER_URI_PLACEHOLDER__ \
+    VITE_SERVER_URI=__VITE_SERVER_URI_PLACEHOLDER__ \
     npm run build -- --mode production
 FROM nginx:alpine AS production-stage
 COPY nginx-custom.conf /etc/nginx/conf.d/default.conf
