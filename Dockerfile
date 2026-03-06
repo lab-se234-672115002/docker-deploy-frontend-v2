@@ -12,7 +12,7 @@
 #COPY --from=build-stage /app/dist /usr/share/nginx/html
 #EXPOSE 8080
 #CMD ["nginx", "-g", "daemon off;"]
-
+#
 FROM node:22-alpine AS build-stage
 WORKDIR /app
 COPY package*.json ./
